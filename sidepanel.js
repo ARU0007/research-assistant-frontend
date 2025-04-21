@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .getElementById("summarizeBtn")
     .addEventListener("click", summarizeText);
   document.getElementById("saveNotesBtn").addEventListener("click", saveNotes);
+  document.getElementById("clearBtn").addEventListener("click", clearNotes);
 });
 
 async function summarizeText() {
@@ -51,6 +52,13 @@ async function saveNotes() {
   const notes = document.getElementById("notes").value;
   chrome.storage.local.set({ researchNotes: notes }, function () {
     alert("Notes saved successfully!");
+  });
+}
+
+function clearNotes() {
+  document.getElementById("notes").value = "";
+  chrome.storage.local.remove("researchNotes", () => {
+    alert(" Notes cleared.");
   });
 }
 
