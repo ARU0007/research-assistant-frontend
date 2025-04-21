@@ -8,22 +8,27 @@
   </head>
   <body>
     <div class="container">
-      <div class="header">
-        <h2>Research Assistant</h2>
-      </div>
+      <header class="header">
+        <h1>Research Assistant</h1>
+      </header>
 
-      <div class="actions">
+      <section class="actions">
         <button id="summarizeBtn">Summarize</button>
-      </div>
+        <button id="clearBtn">Clear Notes</button>
+      </section>
 
-      <div class="notes">
-        <h3>Research Notes</h3>
-        <textarea id="notes" placeholder="take notes here"></textarea>
+      <section class="notes">
+        <h2>Research Notes</h2>
+        <textarea id="notes" placeholder="Type your notes here..."></textarea>
         <button id="saveNotesBtn">Save Notes</button>
-      </div>
+      </section>
 
-      <div id="result"></div>
+      <section id="result" class="result">
+        <h2>Summary</h2>
+        <!-- Summary result will be displayed here -->
+      </section>
     </div>
+
     <script src="sidepanel.js"></script>
   </body>
 </html>
