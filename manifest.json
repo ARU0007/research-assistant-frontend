@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Research Assistant",
+    "version": "1.0",
+    "description": "A Chrome extension that helps you with research by providing summaries and insights from web pages.",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage",
+        "sidePanel"
+    ],
+    "action": {
+        "default_title": "Research Assistant"
+        },
+    "side_panel": {
+        "default_path": "sidepanel.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "https://localhost:8080/*",
+        "<all_urls>"
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self';"
+    }
+
+}
